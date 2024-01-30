@@ -16,7 +16,7 @@ const Header = () => {
 	const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 	return (
 		<SafeAreaView>
-			<View className='flex-row mx-1 p-3 rounded-lg bg-emerald-400 items-center   '>
+			<View className='flex-row mx-1 p-3 rounded-lg bg-emerald-400 items-center' >
 
 				{/* Profile Icon */}
 				<TouchableOpacity
@@ -30,15 +30,13 @@ const Header = () => {
 					/>
 				</TouchableOpacity>
 				{/* Game title */}
-				<View className=' flex-1 items-center '>
-					<Text className='text-xl font-bold'>
+				<View className=' items-center absolute w-full'>
+					<Text className='text-xl font-bold' style={{ fontFamily: 'monospace' }}>
 						Rydle
 					</Text>
 				</View>
 				{/* Invite friends icon */}
-				<TouchableOpacity >
 
-				</TouchableOpacity>
 			</View>
 		</SafeAreaView>
 	)
