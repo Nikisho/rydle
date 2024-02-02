@@ -3,8 +3,8 @@ import React from 'react'
 
 const InputField = () => {
   return (
-    <View className='m-2'>
-      <TextInput className='border-0.5 rounded-lg p-3'>
+    <View className='m-3 mx-2'>
+      <TextInput className='shadow-xl shadow-black bg-white rounded-full p-3'>
         InputField
       </TextInput>
     </View>

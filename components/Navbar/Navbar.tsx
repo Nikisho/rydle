@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
 
 export type RootStackParamList = {
+  Home: String | undefined;
   Profile: String | undefined;
 };
 
@@ -12,15 +13,17 @@ const Navbar = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
   return (
-    <View className='flex-row justify-between absolute bottom-0 bg-emerald-400 w-full p-3 px-10'>
+    <View className='flex-row justify-between absolute self-center bottom-2 border-t-0.5 w-full p-3 px-10'>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Profile')}
+        onPress={() => navigation.navigate('Home')}
         className=''
       >
         <Icon
           name='home'
-          size={30}
+          size={20}
           type='ionicon'
+          color={'#7c3aed'}
+
         />
 
       </TouchableOpacity>
@@ -30,16 +33,16 @@ const Navbar = () => {
       >
         <Icon
           name='people'
-          size={30}
+          size={20}
           type='ionicon'
         />
 
       </TouchableOpacity>
       <TouchableOpacity>
         <Icon
-          name="settings"
+          name="settings-outline"
           type='ionicon'
-          color={'black'}
+          size={20}
         />
       </TouchableOpacity>
     </View>
