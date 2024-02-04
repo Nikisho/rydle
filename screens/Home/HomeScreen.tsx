@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import RiddleCard from './RiddleCard'
 import InputField from './InputField'
 import CustomKeyboard from './CustomKeyboard'
+import SubmitButton from './SubmitButton'
 
 const HomeScreen = () => {
   const [input, setInput] = useState<string>('');
@@ -31,6 +32,7 @@ const HomeScreen = () => {
         <RiddleCard />
         <InputField input={input} />
         <CustomKeyboard onPress={handleKeyPress} />
+        <SubmitButton />
         <Navbar />
       </View>
     </SafeAreaView>

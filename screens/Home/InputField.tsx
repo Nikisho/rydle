@@ -7,9 +7,9 @@ interface InputFieldProps {
 const InputField: React.FC<InputFieldProps> = ({input}) => {
   return (
     <View className='m-3 mx-2'>
-      <TextInput className='shadow-xl shadow-black bg-white rounded-xl p-3'>
+      <Text className='shadow-xl shadow-black bg-white rounded-xl p-3 '>
         {input}
-      </TextInput>
+      </Text>
     </View>
   )
 }

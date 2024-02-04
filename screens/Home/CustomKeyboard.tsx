@@ -17,7 +17,7 @@ const CustomKeyboard: React.FC<CustomKeyboardProps> = ({onPress}) => {
   ];
 
   return (
-    <View style={styles.keyboard}>
+    <View style={styles.keyboard} className='mt-3' >
       {rows.map((row, rowIndex) => (
         <View key={rowIndex} style={styles.row}>
           {row.map((key) => (
@@ -49,10 +49,10 @@ const styles = StyleSheet.create({
   key: {
     borderWidth: 1,
     borderColor: 'gray',
-    padding: 10,
+    padding: 9,
     margin: 1,
     borderRadius: 5,
-    width: windowWidth / 12, // Adjust the divisor to make keys narrower or wider
+    width: windowWidth / 11, // Adjust the divisor to make keys narrower or wider
   },
   largeKey: {
     borderWidth: 1,
