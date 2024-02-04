@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12ed1d13-d744-4d13-aa14-2fe9ad22dd40" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home/CustomKeyboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/CustomKeyboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home/InputField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/InputField.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
