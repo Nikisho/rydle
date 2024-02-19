@@ -13,14 +13,14 @@ const Navbar = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
   return (
-    <View className='flex-row justify-between absolute self-center bottom-2 border-t-0.5 w-full p-3 px-10'>
+    <View className='flex-row justify-between absolute self-center bottom-2 border-t-0.5 w-full py-3 '>
       <TouchableOpacity
         onPress={() => navigation.navigate('Home')}
-        className=''
+        className='flex flex-row w-1/2 justify-center border-r border-1'
       >
         <Icon
           name='home'
-          size={20}
+          size={24}
           type='ionicon'
           color={'#7c3aed'}
 
@@ -28,21 +28,13 @@ const Navbar = () => {
 
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Profile')}
-        className=''
-      >
-        <Icon
-          name='people'
-          size={20}
-          type='ionicon'
-        />
+        className='flex flex-row w-1/2 justify-center  border-1'
 
-      </TouchableOpacity>
-      <TouchableOpacity>
+      >
         <Icon
           name="settings-outline"
           type='ionicon'
-          size={20}
+          size={24}
         />
       </TouchableOpacity>
     </View>

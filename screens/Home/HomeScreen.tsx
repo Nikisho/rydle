@@ -27,7 +27,6 @@ const HomeScreen = () => {
   return (
     <SafeAreaView >
       <View className='h-full  rounded-2xl bg-white shadow-lg shadow-black space-y-2'>
-
         <Header />
         <RiddleCard />
         <InputField input={input} />
