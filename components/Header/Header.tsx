@@ -7,19 +7,15 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { Icon } from '@rneui/themed';
 import { supabase } from '../../supabase';
 import { firebase } from '@react-native-firebase/auth';
-
-export type RootStackParamList = {
-	Profile: String | undefined;
-};
+import { getRandomColor } from '../../utils/getRandomColor';
 
 interface userInfoProps {
 	userName: string,
-	userScore: number
+	userScore: number,
+	userColor: string
 }
 const Header = () => {
-	const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 	const [userInfo, setUserInfo] = useState<userInfoProps | null>(null);
-
 	const fetchUser = async () => {
 		firebase.auth().onAuthStateChanged(async (user) => {
 			if (user) {
@@ -30,7 +26,8 @@ const Header = () => {
 					.eq('uid', user.uid)
 				setUserInfo({
 					userName: (data![0].username),
-					userScore: data![0].score
+					userScore: data![0].score,
+					userColor: getRandomColor()
 				})
 				if (error) {
 					console.error(error.message)
@@ -47,16 +44,15 @@ const Header = () => {
 		<View className='flex-row mx-2 justify-between mt-2 mb-3 p-2 rounded-2xl bg-white items-center shadow-xl shadow-black' >
 
 			{/* Profile Icon */}
-			<TouchableOpacity
-				onPress={() => navigation.navigate('Profile')!}
+			<View
 				className="">
 				<Avatar
 					size={26}
 					rounded
 					title={((userInfo?.userName)?.charAt(0))?.toLocaleUpperCase()}
-					containerStyle={{ backgroundColor: "blue" }}
+					containerStyle={{ backgroundColor: userInfo?.userColor  }}
 				/>
-			</TouchableOpacity>
+			</View>
 			{/* Game title */}
 			<View className=' items-center absolute w-full'>
 				<Text className='text-xl font-bold' style={{ fontFamily: 'monospace' }}>

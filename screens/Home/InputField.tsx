@@ -6,13 +6,13 @@ interface InputFieldProps {
 }
 const InputField: React.FC<InputFieldProps> = ({ input }) => {
   return (
-    <View className='m-3 mx-2'>
+    <View className='mt-3 shadow-xl p-3 mx-2 h-20 rounded-xl shadow-black bg-white flex justify-center  '>
       {
         input === '' ?
-          <Text className='shadow-xl italic text-gray-500 shadow-black bg-white rounded-xl p-3 '>
+          <Text className=' italic text-center text-xl text-gray-500  '>
             Type your answer...
           </Text> :
-          <Text className='shadow-xl shadow-black bg-white rounded-xl p-3 '>
+          <Text className=' text-center text-xl'>
             {input}
           </Text>
       }

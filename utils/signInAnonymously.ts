@@ -1,19 +1,6 @@
 import auth, { firebase } from '@react-native-firebase/auth';
 import { supabase } from '../supabase';
-
-function getRandomUsername() {
-    const adjectives = ["hap", "cle", "fun", "col", "play", "sun", "joy", "bright"];
-    const nouns = ["i", "guin", "raffe", "flow", "bow", "bird", "beam", "light"];
-
-    const getRandomElement = (array: string[]) => array[Math.floor(Math.random() * array.length)];
-
-    const randomAdjective = getRandomElement(adjectives);
-    const randomNoun = getRandomElement(nouns);
-
-    const username = randomAdjective + randomNoun;
-    console.log(username)
-    return username;
-};
+import { getRandomUsername } from './getRandomUsername';
 
 const insertUser = async (uid: string) => {
     const {  error } = await supabase
@@ -36,7 +23,7 @@ export const signInAnonymously = async () => {
         }).then(() => {
             firebase.auth().onAuthStateChanged((user) => {
                 if (user) {
-                    console.log('User email: ', user.uid);
+                    console.log('User uid: ', user.uid);
                     insertUser(user.uid);
                 }
 
@@ -47,9 +34,9 @@ export const signInAnonymously = async () => {
             if (error.code === 'auth/operation-not-allowed') {
                 console.log('Enable anonymous in your firebase console.');
             }
-            // if (error.code === 'auth/uid-already-exists') {
-            //     console.log('The provided uid is already in use by an existing user. Each user must have a unique uid.')
-            // }
+            if (error.code === 'auth/uid-already-exists') {
+                console.log('The provided uid is already in use by an existing user. Each user must have a unique uid.')
+            }
             console.error(error);
         });
 

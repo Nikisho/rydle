@@ -58,7 +58,7 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView >
-      <View className='h-full  rounded-2xl bg-white shadow-lg shadow-black space-y-2'>
+      <View className='h-full  rounded-2xl bg-white shadow-lg shadow-black '>
         <Header />
         <RiddleCard dailyRiddle={dailyRiddle}/>
         <InputField input={input} />

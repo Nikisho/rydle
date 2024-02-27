@@ -29,10 +29,10 @@ const Navbar = () => {
       </TouchableOpacity>
       <TouchableOpacity
         className='flex flex-row w-1/2 justify-center  border-1'
-
+				onPress={() => navigation.navigate('Profile')!}
       >
         <Icon
-          name="settings-outline"
+          name="person-outline"
           type='ionicon'
           size={24}
         />
