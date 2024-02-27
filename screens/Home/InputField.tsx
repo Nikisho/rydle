@@ -16,7 +16,6 @@ const InputField: React.FC<InputFieldProps> = ({ input }) => {
             {input}
           </Text>
       }
-
     </View>
   )
 }
