@@ -23,10 +23,8 @@ export const signInAnonymously = async () => {
         }).then(() => {
             firebase.auth().onAuthStateChanged((user) => {
                 if (user) {
-                    console.log('User uid: ', user.uid);
                     insertUser(user.uid);
                 }
-
             });
         }
         )

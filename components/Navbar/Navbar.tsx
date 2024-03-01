@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Icon } from '@rneui/base'
 import { useNavigation } from '@react-navigation/native'

@@ -1,8 +1,7 @@
 /* This component shows the riddle and is in the home page
 between the virtual keyboard and the header. */
-
 import { Text, View } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 interface RiddleCardProps {
   dailyRiddle: string;

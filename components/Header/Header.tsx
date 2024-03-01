@@ -1,56 +1,25 @@
-import { View, Text, TouchableOpacity } from 'react-native'
-import React, { useEffect, useState } from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { View, Text } from 'react-native'
+import React from 'react'
 import { Avatar } from '@rneui/themed';
-import { useNavigation } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { Icon } from '@rneui/themed';
-import { supabase } from '../../supabase';
-import { firebase } from '@react-native-firebase/auth';
-import { getRandomColor } from '../../utils/getRandomColor';
-
 interface userInfoProps {
-	userName: string,
-	userScore: number,
-	userColor: string
-}
-const Header = () => {
-	const [userInfo, setUserInfo] = useState<userInfoProps | null>(null);
-	const fetchUser = async () => {
-		firebase.auth().onAuthStateChanged(async (user) => {
-			if (user) {
-				console.log('User email: ', user.uid);
-				const { data, error } = await supabase
-					.from('users')
-					.select()
-					.eq('uid', user.uid)
-				setUserInfo({
-					userName: (data![0].username),
-					userScore: data![0].score,
-					userColor: getRandomColor()
-				})
-				if (error) {
-					console.error(error.message)
-				}
-			}
-		});
-
+	userInfo : {
+		userName: string,
+		userScore: number,
+		userColor: string
 	}
-
-	useEffect(() => {
-		fetchUser();
-	}, [])
+}
+const Header = ({userInfo}: userInfoProps) => {
 	return (
 		<View className='flex-row mx-2 justify-between mt-2 mb-3 p-2 rounded-2xl bg-white items-center shadow-xl shadow-black' >
 
 			{/* Profile Icon */}
 			<View
-				className="">
+				className="rounded-full ">
 				<Avatar
-					size={26}
-					rounded
+					size={28}
+					rounded 
 					title={((userInfo?.userName)?.charAt(0))?.toLocaleUpperCase()}
-					containerStyle={{ backgroundColor: userInfo?.userColor  }}
+					containerStyle={{ backgroundColor: userInfo?.userColor }}
 				/>
 			</View>
 			{/* Game title */}
@@ -60,8 +29,8 @@ const Header = () => {
 				</Text>
 			</View>
 			{/* score*/}
-			<View className='p-2 px-4 rounded-xl bg-violet-500'>
-				<Text className='font-semibold text-white'>
+			<View className='p-1 px-3 rounded-lg bg-violet-500'>
+				<Text className='font-semibold text-xl text-white'>
 					{userInfo?.userScore}
 				</Text>
 			</View>

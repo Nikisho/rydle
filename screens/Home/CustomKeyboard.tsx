@@ -1,7 +1,5 @@
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from 'react-native'
 import React from 'react'
-
-
 interface CustomKeyboardProps {
   onPress: (key: string) => void;
 };
