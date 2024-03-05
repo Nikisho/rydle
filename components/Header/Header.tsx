@@ -16,7 +16,7 @@ const Header = ({userInfo}: userInfoProps) => {
 			<View
 				className="rounded-full ">
 				<Avatar
-					size={28}
+					size={30}
 					rounded 
 					title={((userInfo?.userName)?.charAt(0))?.toLocaleUpperCase()}
 					containerStyle={{ backgroundColor: userInfo?.userColor }}

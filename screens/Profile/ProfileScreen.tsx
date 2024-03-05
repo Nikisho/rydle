@@ -44,23 +44,26 @@ const ProfileScreen = () => {
 	}, []);
 
 	return (
-		<SafeAreaView className='flex flex-col h-screen items-center justify-center  '>
+		<SafeAreaView className='flex flex-col h-screen items-center   '>
 
-			<View className='border-b w-full items-center py-4 '>
-				<Avatar
-					size={120}
-					rounded
-					title={((userDetails?.userName)?.charAt(0))?.toLocaleUpperCase()}
-					containerStyle={{ backgroundColor: 'blue' }}
-				/>
+			<View className='border-b w-full items-center justify-end h-1/2 bg-purple-500'>
+				<View className='bg-white w-full p-4 h-1/2 items-center rounded-t-full '>
+
+					<Avatar
+						size={120}
+						rounded
+						title={((userDetails?.userName)?.charAt(0))?.toLocaleUpperCase()}
+						containerStyle={{ backgroundColor: 'blue' }}
+					/>
+				</View>
 			</View>
 
 			<View className='w-full items-center justify-center h-24 flex flex-row space-x-3'
 
 			>
 				<Text className='text-2xl ' style={{ fontFamily: 'monospace' }}>
-						Hey
-					</Text>
+					Hey
+				</Text>
 				<Text className='text-2xl ' style={{ fontFamily: 'monospace' }}>
 					{userDetails?.userName}!
 				</Text>
