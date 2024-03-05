@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="12ed1d13-d744-4d13-aa14-2fe9ad22dd40" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home/CustomKeyboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/CustomKeyboard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/Home/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home/InputField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/InputField.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home/RiddleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home/RiddleCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/getRandomUsername.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/getRandomUsername.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/signInAnonymously.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/signInAnonymously.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Profile/ProfileScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Profile/ProfileScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

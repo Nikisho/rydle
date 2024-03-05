@@ -12,7 +12,7 @@ import { signInAnonymously } from '../../utils/signInAnonymously'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { firebase } from '@react-native-firebase/auth'
 import { getRandomColor } from '../../utils/getRandomColor'
-// import { resetAsyncStorage } from '../../utils/resetAsyncStorage'
+import { resetAsyncStorage } from '../../utils/resetAsyncStorage'
 import Lives from './Lives'
 
 interface userInfoProps {
@@ -24,7 +24,7 @@ interface userInfoProps {
 
 const HomeScreen = () => {
 	const [input, setInput] = useState<string>('');
-	const todaysDate = '2024-03-07';
+	const todaysDate = new Date();
 	const [dailyRiddle, setDailyRiddle] = useState('');
 	const [dailyRiddleAnswer, setDailyRiddleAnswer] = useState('');
 	const maxAttemptsPerDay = 3;
