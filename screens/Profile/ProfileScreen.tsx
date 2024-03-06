@@ -44,49 +44,51 @@ const ProfileScreen = () => {
 	}, []);
 
 	return (
-		<SafeAreaView className='flex flex-col h-screen items-center   '>
+		<SafeAreaView >
+			<View className='flex flex-col h-screen items-center   '>
 
-			<View className='border-b w-full items-center justify-end h-1/2 bg-purple-500'>
-				<View className='bg-white w-full p-4 h-1/2 items-center rounded-t-full '>
+				<View className='border-b w-full items-center justify-end h-1/2 bg-purple-500'>
+					<View className='bg-white w-full p-4 h-1/2 items-center rounded-t-full '>
 
-					<Avatar
-						size={120}
-						rounded
-						title={((userDetails?.userName)?.charAt(0))?.toLocaleUpperCase()}
-						containerStyle={{ backgroundColor: 'blue' }}
-					/>
+						<Avatar
+							size={120}
+							rounded
+							title={((userDetails?.userName)?.charAt(0))?.toLocaleUpperCase()}
+							containerStyle={{ backgroundColor: 'blue' }}
+						/>
+					</View>
 				</View>
-			</View>
 
-			<View className='w-full items-center justify-center h-24 flex flex-row space-x-3'
+				<View className='w-full items-center justify-center h-24 flex flex-row space-x-3'
 
-			>
-				<Text className='text-2xl ' style={{ fontFamily: 'monospace' }}>
-					Hey
-				</Text>
-				<Text className='text-2xl ' style={{ fontFamily: 'monospace' }}>
-					{userDetails?.userName}!
-				</Text>
-			</View>
-
-			<View className='border-t  w-full items-center flex flex-col p-6 justify-center space-y-4 '
-
-			>
-
-				<Text className='text-2xl ' style={{ fontFamily: 'monospace' }}>
-					Your score is
-				</Text>
-				<View className='p-6 rounded-full bg-amber-600'>
-
-					<Text className='text-2xl text-white font-mono font-bold'
-						style={{ fontFamily: 'monospace' }}
-					>
-						{userDetails?.userScore}
+				>
+					<Text className='text-2xl ' style={{ fontFamily: 'monospace' }}>
+						Hey
+					</Text>
+					<Text className='text-2xl ' style={{ fontFamily: 'monospace' }}>
+						{userDetails?.userName}!
 					</Text>
 				</View>
-			</View>
-			<Navbar />
 
+				<View className='border-t  w-full items-center flex flex-col p-6 justify-center space-y-4 '
+
+				>
+
+					<Text className='text-2xl ' style={{ fontFamily: 'monospace' }}>
+						Your score is
+					</Text>
+					<View className='p-6 rounded-full bg-amber-600'>
+
+						<Text className='text-2xl text-white font-mono font-bold'
+							style={{ fontFamily: 'monospace' }}
+						>
+							{userDetails?.userScore}
+						</Text>
+					</View>
+				</View>
+				<Navbar />
+
+			</View>
 		</SafeAreaView>
 	)
 }
