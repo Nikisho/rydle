@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "245944929199",
+    "project_id": "riddle-app-3c069",
+    "storage_bucket": "riddle-app-3c069.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245944929199:android:0f801b5e976e6631d2fd5a",
+        "android_client_info": {
+          "package_name": "com.yourcompany.yourappname"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPGyQvV8BJ2DWa05qjj4i4h9TvAemPtsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

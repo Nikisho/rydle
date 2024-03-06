@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "rydle",
-    "slug": "rydle",
+    "slug": "riddle-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -32,6 +32,12 @@
     ],
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a4604552-53d0-4da9-80c1-8df5fb7c2512"
+      }
+    },
+    "owner": "nicolasromain"
   }
 }
