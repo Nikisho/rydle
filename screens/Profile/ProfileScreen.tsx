@@ -45,7 +45,7 @@ const ProfileScreen = () => {
 
 	return (
 		<SafeAreaView >
-			<View className='flex flex-col h-screen items-center   '>
+			<View className='flex flex-col h-full items-center   '>
 
 				<View className='border-b w-full items-center justify-end h-1/2 bg-purple-500'>
 					<View className='bg-white w-full p-4 h-1/2 items-center rounded-t-full '>
@@ -77,7 +77,7 @@ const ProfileScreen = () => {
 					<Text className='text-2xl ' style={{ fontFamily: 'monospace' }}>
 						Your score is
 					</Text>
-					<View className='p-6 rounded-full bg-amber-600'>
+					<View className='p-8 rounded-full bg-amber-600'>
 
 						<Text className='text-2xl text-white font-mono font-bold'
 							style={{ fontFamily: 'monospace' }}
