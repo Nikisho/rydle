@@ -7,6 +7,25 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:245944929199:android:be889900207ea33fd2fd5a",
+        "android_client_info": {
+          "package_name": "com.rydle.rydle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPGyQvV8BJ2DWa05qjj4i4h9TvAemPtsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:245944929199:android:0f801b5e976e6631d2fd5a",
         "android_client_info": {
           "package_name": "com.yourcompany.yourappname"
