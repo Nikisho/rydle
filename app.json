@@ -19,7 +19,7 @@
     },
     "android": {
       "package": "com.rydle.rydle",
-      "versionCode": 1,
+      "versionCode": 2,
       "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/applogo.png",
