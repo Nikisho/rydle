@@ -86,8 +86,6 @@ const ProfileScreen = () => {
 						</Text>
 					</View>
 				</View>
-				<Navbar />
-
 			</View>
 		</SafeAreaView>
 	)

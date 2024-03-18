@@ -67,11 +67,21 @@ const HomeScreen = () => {
 	useEffect(() => {
 		const loadAttempts = async () => {
 			try {
+				// Get the current date
+				const currentDate = new Date().toISOString().slice(0, 10);
+
+				// Get stored date and attempts
+				const storedDate = await AsyncStorage.getItem('lastAttemptDate');
 				const storedAttempts = await AsyncStorage.getItem(storageKey);
-				if (storedAttempts) {
-					setRemainingAttempts(parseInt(storedAttempts, 10));
-				} else {
+
+				// If there's no stored date or it's not today, reset attempts
+				if (!storedDate || storedDate !== currentDate) {
 					setRemainingAttempts(maxAttemptsPerDay);
+					await AsyncStorage.setItem(storageKey, maxAttemptsPerDay.toString());
+					await AsyncStorage.setItem('lastAttemptDate', currentDate);
+				} else {
+					// Otherwise, load stored attempts
+					setRemainingAttempts(storedAttempts ? parseInt(storedAttempts, 10) : maxAttemptsPerDay);
 				}
 			} catch (error) {
 				console.error('Error loading attempts:', error);
@@ -108,9 +118,9 @@ const HomeScreen = () => {
 		//Update user score depending on the number of attempts remaining
 		if (input === dailyRiddleAnswer) {
 			points = updatedAttempts === 3 ? 15 : updatedAttempts === 2 ? 10 : updatedAttempts === 1 ? 5 : 0;
-			const { error} = await supabase
+			const { error } = await supabase
 				.from('users')
-				.update({score: userInfo?.userScore! + points! })
+				.update({ score: userInfo?.userScore! + points! })
 				.eq('uid', userInfo?.uid)
 
 			Alert.alert('Well done! You get ' + points + ' points');
@@ -141,14 +151,13 @@ const HomeScreen = () => {
 
 	return (
 		<SafeAreaView >
-			<View className='h-full rounded-2xl bg-white shadow-lg shadow-black '>
-				<Header userInfo={userInfo!}/>
+			<View className='h-full rounded-2xl bg-white shadow-lg shadow-black py-5 '>
+				<Header userInfo={userInfo!} />
 				<RiddleCard dailyRiddle={dailyRiddle} />
 				<InputField input={input} />
 				<CustomKeyboard onPress={handleKeyPress} />
 				<SubmitButton submitAnswer={submitAnswer} />
 				<Lives remainingAttempts={remainingAttempts} />
-				<Navbar />
 			</View>
 		</SafeAreaView>
 	)

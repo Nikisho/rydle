@@ -9,7 +9,7 @@ const Lives: React.FC<LivesProps> = ({ remainingAttempts }) => {
         <View className='w-full flex flex-row justify-center space-x-3'>
             {
                 [...Array(remainingAttempts)].map((e, i) => (
-                    <Text className='text-xl'>
+                    <Text className='text-xl' key={i}>
                         &#x2764;
                     </Text>
                 ))

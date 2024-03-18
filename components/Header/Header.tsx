@@ -1,6 +1,5 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { Avatar } from '@rneui/themed';
 interface userInfoProps {
 	userInfo : {
 		userName: string,
@@ -14,13 +13,12 @@ const Header = ({userInfo}: userInfoProps) => {
 
 			{/* Profile Icon */}
 			<View
-				className="rounded-full ">
-				<Avatar
-					size={30}
-					rounded 
-					title={((userInfo?.userName)?.charAt(0))?.toLocaleUpperCase()}
-					containerStyle={{ backgroundColor: userInfo?.userColor }}
-				/>
+				className="rounded-full px-2 flex items-center" style={{
+					backgroundColor: userInfo?.userColor
+				}}>
+				<Text className='text-xl font-bold text-white'>
+					{((userInfo?.userName)?.charAt(0))?.toLocaleUpperCase()}
+				</Text>
 			</View>
 			{/* Game title */}
 			<View className=' items-center absolute w-full'>
